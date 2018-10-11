@@ -10,8 +10,20 @@ namespace UdemyIntermediate
     {
         static void Main(string[] args)
         {
-            // RunStopWatchExercise(); 
-            // RunStackOverflowExercise();
+            //RunStopWatchExercise(); 
+            //RunStackOverflowExercise();
+            //RunStackExercise();
+        }
+
+        private static void RunStackExercise()
+        {
+            Stack stack = new Stack();
+            stack.Push(0); stack.Push(1); stack.Push(2);
+
+            Console.WriteLine(stack.Pop()); Console.WriteLine(stack.Pop()); Console.WriteLine(stack.Pop());
+
+            //Console.WriteLine(stack.Pop()); // try pop one more time 
+            //stack.Push(null); // try add null
         }
 
         private static void RunStackOverflowExercise()
