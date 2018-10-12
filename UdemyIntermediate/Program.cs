@@ -13,6 +13,23 @@ namespace UdemyIntermediate
             //RunStopWatchExercise(); 
             //RunStackOverflowExercise();
             //RunStackExercise();
+            //RunDatabaseConnectionExercise
+            // RunDatabaseCommandExercise();
+        }
+
+        private static void RunDatabaseCommandExercise()
+        {
+            DbConnection dbConnection = new OracleConnection("Connection");
+            DbCommand dbCommand = new DbCommand(dbConnection, "Instruction");
+            dbCommand.Execute();
+        }
+
+        private static void RunDatabaseConnectionExercise()
+        {
+            SqlConnection databaseConnection = new SqlConnection("Connection to database");
+            databaseConnection.TimeOut = new TimeSpan(0, 0, 5); // Update the timeout
+            databaseConnection.OpenConnection();
+            databaseConnection.CloseConnection();
         }
 
         private static void RunStackExercise()
