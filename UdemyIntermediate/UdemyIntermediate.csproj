@@ -45,6 +45,10 @@
   <ItemGroup>
     <Compile Include="DbCommand.cs" />
     <Compile Include="DbConnection.cs" />
+    <Compile Include="EncodeVideo.cs" />
+    <Compile Include="IActivity.cs" />
+    <Compile Include="IWorkflow.cs" />
+    <Compile Include="NotifyUploader.cs" />
     <Compile Include="OracleConnection.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Program.cs" />
@@ -52,6 +56,10 @@
     <Compile Include="SqlConnection.cs" />
     <Compile Include="Stack.cs" />
     <Compile Include="Stopwatch.cs" />
+    <Compile Include="UpdateDatabase.cs" />
+    <Compile Include="UploadVideo.cs" />
+    <Compile Include="WorkflowEngine.cs" />
+    <Compile Include="Workflow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
