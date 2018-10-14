@@ -1,20 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UdemyIntermediate
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            //RunStopWatchExercise(); 
-            //RunStackOverflowExercise();
-            //RunStackExercise();
-            //RunDatabaseConnectionExercise
-            // RunDatabaseCommandExercise();
+            RunStopWatchExercise();
+            RunStackOverflowExercise();
+            RunStackExercise();
+            RunDatabaseConnectionExercise();
+            RunDatabaseCommandExercise();
+            RunWorkflowEngineExercise();
+        }
+
+        private static void RunWorkflowEngineExercise()
+        {
+            List<IActivity> workflowActivities = new List<IActivity>();
+            workflowActivities.Add(new UploadVideo());
+            workflowActivities.Add(new EncodeVideo());
+            workflowActivities.Add(new NotifyUploader());
+
+            Workflow workflow = new Workflow(workflowActivities);
+            workflow.AddActivity(new UpdateDatabase());
+
+            WorkflowEngine workflowEngine = new WorkflowEngine();
+            workflowEngine.Run(workflow);
         }
 
         private static void RunDatabaseCommandExercise()
